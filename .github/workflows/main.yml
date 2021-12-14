@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy
-        uses: EmmaSamoilova/one-html-page-challenge@v1
+        uses: EmmaSamoilova/one-html-page-challenge@v2
         with:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
           BRANCH: master
