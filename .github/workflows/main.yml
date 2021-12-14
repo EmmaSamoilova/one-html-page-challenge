@@ -12,10 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       
       - name: Deploy
-        uses:  EmmaSamoilova/one-html-page-challenge@v2
+        uses:  EmmaSamoilova/one-html-page-challenge@v1
         with:
           branch: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
