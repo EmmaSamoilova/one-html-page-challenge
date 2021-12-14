@@ -8,15 +8,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v1
-      
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: Deploy
-        uses:  EmmaSamoilova/one-html-page-challenge@v1
+        uses: EmmaSamoilova/one-html-page-challenge@v3
         with:
-          branch: master
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          BRANCH: master
+          FOLDER: .
